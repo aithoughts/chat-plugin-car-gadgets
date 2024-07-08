@@ -1,0 +1,17 @@
+{
+    "schema_version": "v1",
+    "name_for_human": "Car Brands Gadget",
+    "name_for_model": "car_brands_gadget",
+    "description_for_model": "An automotive knowledge plugin for quick information retrieval and in-depth analysis. Explore projects, compare options, track growth, and analyze activity.",
+    "description_for_human": "Dive deeper into automotive knowledge with this plugin. Analyze projects, compare options, track progress, and understand activity trends. Your automotive expert assistant.",
+    "auth": {
+        "type": "none"
+    },
+    "api": {
+        "type": "openapi",
+        "url": "https://chat-plugin-car-brands-gadget.vercel.app/openapi.yaml"
+    },
+    "logo_url": "https://chat-plugin-car-brands-gadget.vercel.app/logo.png",
+    "contact_email": "nextprofessionalpower@gmail.com",
+    "legal_info_url": "https://www.theforage.cn/legal/terms"
+}
