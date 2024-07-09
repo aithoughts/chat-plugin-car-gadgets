@@ -263,6 +263,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/User'
+        '404':
+          description: 没有找到 CarMake 用户信息。
   /api/github/{owner}/{repo}:
     get:
       operationId: getCarMakeRepo
@@ -288,5 +290,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Repo'
+        '404':
+          description: 没有找到 CarMake 车型品牌库。
 servers:
   - url: https://chat-plugin-car-brands-gadget.vercel.app
