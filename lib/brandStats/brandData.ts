@@ -73,9 +73,9 @@ export default async function generateBrandStats(owner: string, repo: string) {
   if (!response.ok) {
     // if is 404, throw error
     if (response.status === 404) {
-      throw new Error(`CarMake Brand not found for user ${owner} repo ${repo}`);
+      // throw new Error(`CarMake Brand not found for user ${owner} repo ${repo}`);
     } else {
-      throw new Error(`CarMake API returned ${response.status} for user ${owner} repo ${repo}: ${response.json()}`);
+      // throw new Error(`CarMake API returned ${response.status} for user ${owner} repo ${repo}: ${response.json()}`);
     }
   }
   const data = await response.json();
