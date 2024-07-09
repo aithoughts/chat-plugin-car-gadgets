@@ -293,4 +293,4 @@ paths:
         '404':
           description: 没有找到 CarMake 车型品牌库。
 servers:
-  - url: https://chat-plugin-car-brands-gadget.vercel.app
+  - url: https://chat-plugin-car-brands-gadget.theforage.cn

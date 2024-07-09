@@ -1,0 +1,419 @@
+{
+    "components": {
+      "schemas": {
+        "User": {
+          "type": "object",
+          "properties": {
+            "html_url": {
+              "type": "string",
+              "description": "用户 CarMake 用户资料的 HTML URL。"
+            },
+            "type": {
+              "type": "string",
+              "description": "CarMake 帐户的类型。"
+            },
+            "name": {
+              "type": "string",
+              "description": "CarMake 用户的姓名。"
+            },
+            "company": {
+              "type": "string",
+              "description": "CarMake 用户所属的公司。"
+            },
+            "blog": {
+              "type": "string",
+              "description": "用户博客的 URL。"
+            },
+            "location": {
+              "type": "string",
+              "description": "CarMake 用户的位置。"
+            },
+            "email": {
+              "type": "string",
+              "nullable": true,
+              "description": "CarMake 用户的电子邮件。"
+            },
+            "hireable": {
+              "type": "boolean",
+              "description": "用户是否可雇用。"
+            },
+            "bio": {
+              "type": "string",
+              "description": "CarMake 用户的简介。"
+            },
+            "twitter_username": {
+              "type": "string",
+              "description": "CarMake 用户的 Twitter 用户名。"
+            },
+            "public_repos": {
+              "type": "integer",
+              "description": "CarMake 用户的公共车型品牌库数量。"
+            },
+            "public_gists": {
+              "type": "integer",
+              "description": "CarMake 用户的公共 gist 数量。"
+            },
+            "followers": {
+              "type": "integer",
+              "description": "CarMake 用户的关注者数量。"
+            },
+            "following": {
+              "type": "integer",
+              "description": "CarMake 用户正在关注的人数。"
+            },
+            "created_at": {
+              "type": "string",
+              "format": "date-time",
+              "description": "CarMake 用户帐户的创建日期和时间。"
+            },
+            "updated_at": {
+              "type": "string",
+              "format": "date-time",
+              "description": "CarMake 用户帐户的更新日期和时间。"
+            },
+            "totalPRs": {
+              "type": "integer",
+              "description": "CarMake 用户的拉取请求总数。"
+            },
+            "totalCommits": {
+              "type": "integer",
+              "description": "CarMake 用户的提交总数。"
+            },
+            "totalIssues": {
+              "type": "integer",
+              "description": "CarMake 用户打开的问题总数。"
+            },
+            "totalStars": {
+              "type": "integer",
+              "description": "CarMake 用户车型品牌库收到的星标总数。"
+            },
+            "contributedTo": {
+              "type": "integer",
+              "description": "CarMake 用户已贡献的车型品牌库数量。"
+            },
+            "rank": {
+              "$ref": "#/components/schemas/Rank"
+            },
+            "mostStarredRepos": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "用户最受欢迎的车型品牌库列表。"
+            }
+          }
+        },
+        "Rank": {
+          "type": "object",
+          "properties": {
+            "level": {
+              "type": "string",
+              "description": "CarMake 用户等级的级别。"
+            },
+            "percentile": {
+              "type": "number",
+              "format": "double",
+              "description": "CarMake 用户等级的百分位数。"
+            }
+          }
+        },
+        "Repo": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "车型品牌库的名称。"
+            },
+            "full_name": {
+              "type": "string",
+              "description": "车型品牌库的全名。"
+            },
+            "private": {
+              "type": "boolean",
+              "description": "指示车型品牌库是否为私有。"
+            },
+            "owner": {
+              "type": "object",
+              "description": "车型品牌库的所有者。",
+              "properties": {
+                "login": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "site_admin": {
+                  "type": "boolean"
+                }
+              }
+            },
+            "html_url": {
+              "type": "string",
+              "description": "车型品牌库的 HTML URL。"
+            },
+            "description": {
+              "type": "string",
+              "description": "车型品牌库的描述。"
+            },
+            "fork": {
+              "type": "boolean",
+              "description": "指示车型品牌库是否为 fork。"
+            },
+            "created_at": {
+              "type": "string",
+              "format": "date-time",
+              "description": "车型品牌库的创建时间。"
+            },
+            "updated_at": {
+              "type": "string",
+              "format": "date-time",
+              "description": "车型品牌库的最后更新时间。"
+            },
+            "pushed_at": {
+              "type": "string",
+              "format": "date-time",
+              "description": "车型品牌库的最后推送时间。"
+            },
+            "homepage": {
+              "type": "string",
+              "description": "车型品牌库的主页。"
+            },
+            "size": {
+              "type": "integer",
+              "description": "车型品牌库的大小。"
+            },
+            "stargazers_count": {
+              "type": "integer",
+              "description": "车型品牌库的 stargazers 数量。"
+            },
+            "watchers_count": {
+              "type": "integer",
+              "description": "车型品牌库的观察者数量。"
+            },
+            "language": {
+              "type": "string",
+              "description": "车型品牌库的主要语言。"
+            },
+            "has_issues": {
+              "type": "boolean",
+              "description": "指示车型品牌库是否启用了问题。"
+            },
+            "has_projects": {
+              "type": "boolean",
+              "description": "指示车型品牌库是否启用了项目。"
+            },
+            "has_downloads": {
+              "type": "boolean",
+              "description": "指示车型品牌库是否启用了下载。"
+            },
+            "has_wiki": {
+              "type": "boolean",
+              "description": "指示车型品牌库是否启用了 wiki。"
+            },
+            "has_pages": {
+              "type": "boolean",
+              "description": "指示车型品牌库是否启用了 CarMake 页面。"
+            },
+            "has_discussions": {
+              "type": "boolean",
+              "description": "指示车型品牌库是否启用了讨论。"
+            },
+            "forks_count": {
+              "type": "integer",
+              "description": "车型品牌库的 fork 数量。"
+            },
+            "mirror_url": {
+              "type": "string",
+              "description": "车型品牌库的镜像 URL。"
+            },
+            "archived": {
+              "type": "boolean",
+              "description": "指示车型品牌库是否已存档。"
+            },
+            "disabled": {
+              "type": "boolean",
+              "description": "指示车型品牌库是否已禁用。"
+            },
+            "open_issues_count": {
+              "type": "integer",
+              "description": "车型品牌库中打开的问题数量。"
+            },
+            "license": {
+              "type": "object",
+              "description": "车型品牌库的许可证。",
+              "properties": {
+                "key": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "spdx_id": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "node_id": {
+                  "type": "string"
+                }
+              }
+            },
+            "allow_forking": {
+              "type": "boolean",
+              "description": "指示是否允许为车型品牌库进行 fork。"
+            },
+            "is_template": {
+              "type": "boolean",
+              "description": "指示车型品牌库是否为模板。"
+            },
+            "topics": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "车型品牌库的主题。"
+            },
+            "visibility": {
+              "type": "string",
+              "description": "车型品牌库的可见性。"
+            },
+            "forks": {
+              "type": "integer",
+              "description": "车型品牌库的 fork 数量。"
+            },
+            "open_issues": {
+              "type": "integer",
+              "description": "车型品牌库中打开的问题数量。"
+            },
+            "watchers": {
+              "type": "integer",
+              "description": "车型品牌库的观察者数量。"
+            },
+            "default_branch": {
+              "type": "string",
+              "description": "车型品牌库的默认分支。"
+            },
+            "network_count": {
+              "type": "integer",
+              "description": "车型品牌库的网络数量。"
+            },
+            "subscribers_count": {
+              "type": "integer",
+              "description": "车型品牌库的订阅者数量。"
+            },
+            "stargazerData": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "date": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "count": {
+                    "type": "integer"
+                  },
+                  "tag": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "readme": {
+              "type": "string",
+              "description": "车型品牌库的 README。"
+            }
+          }
+        }
+      }
+    },
+    "info": {
+      "version": "v1",
+      "title": "CarMake OSS Stat Plugin API",
+      "description": "这是 CarMake Stat Plugin 的 API 规范。它提供用于检索 CarMake 用户或特定 CarMake 车型品牌库的统计信息和信息的端点。"
+    },
+    "openapi": "3.0.1",
+    "paths": {
+      "/api/github/{owner}": {
+        "get": {
+          "operationId": "getCarMakeUser",
+          "summary": "获取 CarMake 用户信息",
+          "description": "检索 CarMake 用户的统计信息和信息。",
+          "parameters": [
+            {
+              "in": "path",
+              "name": "owner",
+              "required": true,
+              "description": "CarMake 用户名。",
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "成功检索到用户信息。",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/User"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "没有找到 CarMake 用户信息。"
+            }
+          }
+        }
+      },
+      "/api/github/{owner}/{repo}": {
+        "get": {
+          "operationId": "getCarMakeRepo",
+          "summary": "获取 CarMake 车型品牌库信息",
+          "description": "检索特定 CarMake 车型品牌库的统计信息、历史记录和信息。",
+          "parameters": [
+            {
+              "in": "path",
+              "name": "owner",
+              "required": true,
+              "description": "CarMake 用户名。",
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+              "in": "path",
+              "name": "repo",
+              "required": true,
+              "description": "CarMake 车型品牌库名称。",
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "成功检索到车型品牌库信息。",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Repo"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "没有找到 CarMake 车型品牌库。"
+            }
+          }
+        }
+      }
+    },
+    "servers": [
+      {
+        "url": "https://chat-plugin-car-brands-gadget.theforage.cn"
+      }
+    ]
+  }

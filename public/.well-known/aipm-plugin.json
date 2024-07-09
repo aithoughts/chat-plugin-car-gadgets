@@ -9,9 +9,9 @@
     },
     "api": {
         "type": "openapi",
-        "url": "https://chat-plugin-car-brands-gadget.vercel.app/openapi.yaml"
+        "url": "https://chat-plugin-car-brands-gadget.theforage.cn/openapi.json"
     },
-    "logo_url": "https://chat-plugin-car-brands-gadget.vercel.app/logo.png",
+    "logo_url": "https://chat-plugin-car-brands-gadget.theforage.cn/logo.png",
     "contact_email": "nextprofessionalpower@gmail.com",
     "legal_info_url": "https://www.theforage.cn/legal/terms"
 }
