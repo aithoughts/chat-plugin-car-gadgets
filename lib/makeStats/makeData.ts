@@ -37,9 +37,9 @@ export default async function generateMakeStats(owner: string): Promise<MakeStat
     if (!response.ok) {
         // if is 404, throw error
         if (response.status === 404) {
-            // throw new Error(`CarMake User not found for user ${owner}`);
+            throw new Error(`CarMake User not found for user ${owner}`);
         }
-        // throw new Error(`CarMake API returned ${response.status} for user ${owner}: ${JSON.stringify(await response.json())}`);
+        throw new Error(`CarMake API returned ${response.status} for user ${owner}: ${JSON.stringify(await response.json())}`);
     }
     const data = await response.json();
     // calculate the owner's more CarMake stats
